@@ -1,0 +1,24 @@
+<%= render('shared/nav') %>
+
+<section>
+  <% if @groups.empty? %>
+    <h3>Add a new ctegory first</h3>
+  <% else %>
+    <ul>
+      <% @groups.each do |g| %>
+        <li>
+          <div>
+            <%= image_tag(check_icon(g.icon)) %>
+          </div>
+          <div>
+            <%= link_to(g.name, group_entities_path(g)) %>
+            <span><%= created_by %></span>
+            <span><%= total_amount(g) %></span>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+
+<%= link_to('New Category', new_group_path) %>

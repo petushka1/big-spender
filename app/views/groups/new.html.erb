@@ -1,0 +1,15 @@
+<section>
+  <%= form_with(model: @group) do |f| %>
+    <div>
+      <%= f.text_field(:name, placeholder: 'Name', required: true) %>
+    </div>
+
+    <div>
+      <%= f.text_field(:icon, placeholder: 'Icon', required: true) %>
+    </div>
+
+    <div>
+      <%= f.submit "Save" %>
+    </div>
+  <% end %>
+</section>
