@@ -1,20 +1,16 @@
-<%= render('shared/nav') %>
-
 <section>
-  <h3>
-    <%= link_to '<', root_path %>
+  <h4 class="categ-item ft-item">
     <span><%= image_tag(check_icon(@group.icon)) %></span>
     <span><%= @group.name %></span>
-    <span><i>$</i><%= @amount || 0 %></strong></span>
-  </h3>
+  </h4>
 
   <% if @entities.empty? %>
     <h3>This category has no transactions yet</h3>
   <% else %>
     <ul>
       <% @entities.each do |e| %>
-        <li>
-          <h4>
+        <li class="trans-item ft-item">
+          <h4 class="flex-between">
             <span><%= e.name %></span>
             <strong><i>$</i><%= e.amount %></strong>
           </h4>
@@ -23,6 +19,7 @@
       <% end %>
     </ul>
   <% end %>
+  <h4><i>TOTAL SPENT: $</i><%= @amount || 0 %></h4>
 </section>
 
 <%= link_to('New Transaction', new_group_entity_path) %>

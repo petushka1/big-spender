@@ -7,6 +7,7 @@ class EntitiesController < ApplicationController
   end
 
   def new
+    @title = 'ADD TRANSACTION'
     if Group.where(user: current_user).ids.empty?
       redirect_to(
         new_group_path,

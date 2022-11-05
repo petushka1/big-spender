@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   def index
+    @title = 'CATEGORIES'
     @groups = Group
       .select('groups.*, SUM(E.amount) as amount')
       .joins('LEFT JOIN categories as C ON C.group_id = groups.id')
@@ -9,6 +10,7 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @title = 'NEW CATEGORY'
     @group = Group.new
   end
 
