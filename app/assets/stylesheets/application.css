@@ -13,3 +13,162 @@
  *= require_tree .
  *= require_self
  */
+:root {
+  --bg-primary: #f5f6fa;
+  --color-p: #3778c2;
+  --color-s: #5fb523;
+  --color: #434b54;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 200;
+  color: var(--color);
+}
+
+h4,
+h3,
+h2,
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  border: 2px solid var(--color-p);
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border: 1px solid #e8e8e8;
+}
+
+.field {
+  padding: 8px 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+.ft-sec {
+  flex: 1;
+}
+
+.ft-sec ul {
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.ft-item {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.new-ft-btn {
+  font-size: larger;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  background-color: var(--color-s);
+}
+
+.categ-item {
+  display: flex;
+  gap: 10px;
+}
+
+.categ-item img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.categ-item > div {
+  width: 100%;
+}
+
+.categ-item .flex-between {
+  margin-top: 6px;
+}
+
+.categ-item a {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--color-p);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--color-p);
+  height: 100px;
+  align-items: center;
+}
+
+.nav * {
+  color: var(--bg-primary);
+}
+
+.item1 {
+  grid-column: 1 / 2;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.item2 {
+  grid-column: 2 / 3;
+  text-align: center;
+}
+
+.item3 {
+  grid-column: 3 / 4;
+  text-align: right;
+  padding-right: 10px;
+  font-size: small;
+}
