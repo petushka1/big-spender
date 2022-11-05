@@ -48,8 +48,4 @@ class EntitiesController < ApplicationController
   def transaction_params
     params.permit(:group_id).merge(entity: @entity)
   end
-  #       def error_render(error)
-  #         flash.now[:alert] = error
-  #         render(:new, status: :unprocessable_entity)
-  #       end
 end
