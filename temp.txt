@@ -1,0 +1,7 @@
+bin/rails generate model group name:string icon:string user:references
+
+bin/rails generate model entity name:string amount:integer user:references
+
+bin/rails generate model categories group:references entity:references
+
+bin/rails generate migration AddNameToUsers name:string
